@@ -1,0 +1,100 @@
+.login{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .loginBox{
+        position: absolute;
+        display: flex;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 730px;
+        height: 430px;
+        border-radius: 5px;
+        background-color: #fff;
+        .loginForm{
+            padding: 40px 60px 20px 60px;
+            box-sizing: content-box;
+            width: 440px;
+            position: relative;
+            .title-active{
+                width: 60px;
+                background-color: #ff9500;
+                height: 4px;
+                border-radius: 3px;
+                position: absolute;
+            }
+
+            .title{
+                display: flex;
+                justify-content: space-around;
+                .title-h4{
+                    margin: 0;
+                    padding-bottom: 10px;
+                    font-weight: 400;
+                    color: #717376;
+                    font-size: 18px;
+                    border-bottom: 4px solid transparent;
+                    cursor: pointer;
+                    user-select: none;
+                }
+                
+            }
+
+            .input{
+                height: 42px;
+                background-color: #f6f7f9;
+                border: 1px solid #f6f7f9;
+                padding: 6px 0 6px 12px;
+                border-radius: 6px;
+                box-shadow: 0 0 5px #fff;
+                color: #666;
+                font-size: 14px;
+                margin-bottom: 20px;
+                &:focus{
+                    border: 1px solid #ffa200;
+                    box-shadow: 0 0 5px #ffa200;
+                    background-color: #fff;
+                }
+            }
+
+            .forget{
+                display: block;
+                color: #717376;
+                text-align: right;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .formBtn{
+                color: #fff;
+                background:linear-gradient(135deg,rgba(255,149,0,1),rgba(255,163,38,1));
+                font-size: 20px;
+                border-radius: 6px;
+                font-weight: 500;
+                width: 100%;
+                height: 42px;
+                &:focus{
+                    border-color: orange;
+                }
+            }
+
+            .selectType {
+                display: block;
+                color: #717376;
+                margin: 10px 0;
+            } 
+
+            .ant-avatar-image{
+                margin-right: 20px;
+            }
+        }
+
+        .logo{
+            height: 100%;
+        }
+    }
+}

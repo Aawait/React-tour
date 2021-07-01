@@ -1,0 +1,17 @@
+.ad {
+  margin-top: 30px;
+}
+.ad .companys .company-title {
+  padding-bottom: 10px;
+  color: #f47920 !important;
+  font-size: 22px !important;
+}
+.ad .companys .company-item {
+  padding: 0 20px 20px;
+  border: 1px solid #ddd;
+}
+.ad .companys .company-item .item-title {
+  padding: 10px 0;
+  margin: 0;
+  color: #1890ff;
+}

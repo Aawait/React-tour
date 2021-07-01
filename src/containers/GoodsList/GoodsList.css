@@ -1,0 +1,42 @@
+.goodslist {
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.goodslist .list-title {
+  padding-bottom: 10px;
+  color: #d71345 !important;
+  font-size: 22px !important;
+}
+.goodslist .ad-grid {
+  width: 100%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 33%);
+}
+.goodslist .ad-grid .grid-item {
+  padding: 0 5px 10px 5px;
+  height: 100%;
+}
+.goodslist .ad-grid .grid-item .imgBox {
+  height: 80%;
+}
+.goodslist .ad-grid .grid-item .item-text {
+  margin: 3px 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  user-select: none;
+}
+.goodslist .ad-grid .grid-item .item-price {
+  height: 10%;
+  color: #f00;
+  margin-bottom: 0;
+}
+.goodslist .ad-grid .big-item {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
