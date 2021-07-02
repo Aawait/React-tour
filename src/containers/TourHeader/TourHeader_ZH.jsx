@@ -6,7 +6,8 @@ import {
     Dropdown,
     Menu,
     Button,
-    Input
+    Input,
+    message
 } from 'antd'
 
 import { withRouter } from 'react-router-dom'
@@ -22,18 +23,32 @@ const {Text,Title} = Typography
 const {Search} = Input
 class TourHeader extends Component {
 
-    
+    state = {
+        isLogin:false
+    }
 
     handleClick = (item) => {
          const value = item.domEvent.target.innerText
          this.props.setLanguage(value)
     }
 
-     
+    componentDidMount(){
+        this.token = sessionStorage.getItem('_token')
+        if(this.token){
+            this.setState({isLogin:true})
+        }
+    }
+
+    backOut = () => {
+        sessionStorage.removeItem('_token')
+        message.info("已退出登录")
+        this.setState({isLogin:false})
+    }
+
     render() {
 
         const {navList,language,history} = this.props
-
+        const {isLogin} = this.state
         return (
             
             <Layout className="header">
@@ -54,10 +69,21 @@ class TourHeader extends Component {
                             <Text>{language}</Text>
                         </Dropdown.Button>
                     </div>
-                    <div className="nav-right">
-                        <Button onClick= {()=> history.push('/login?type=1')}>登录</Button>
-                        <Button onClick= {()=> history.push('/login?type=2')}>注册</Button>
-                    </div>
+                    {
+                        isLogin ? (
+                            <div className="nav-right">
+                                <Text>{'你好，'+this.token}</Text>
+                                <Button danger onClick={this.backOut}>退出</Button>
+                             </div>
+                        ) :
+                        (
+                           <div className="nav-right">
+                            <Button onClick= {()=> history.push('/login?type=1')}>登录</Button>
+                            <Button onClick= {()=> history.push('/login?type=2')}>注册</Button>
+                          </div>
+                        )
+                    }
+                    
                 </div>
                 <Header className="top-header">
                     <Avatar
