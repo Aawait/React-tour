@@ -1,7 +1,7 @@
 
 /* 该模块用来初始化和加工数据 */
 import {combineReducers} from 'redux'
-import {GET_NAVLIST,SET_LANGUAGE} from './constant'
+import {GET_NAVLIST,SET_LANGUAGE,GET_DETAIL,GET_COMMENTS,ADD_COMMENT} from './constant'
 
 import {
     initNavList,
@@ -28,6 +28,7 @@ function language(preState=initLanguage,action){
 
 // 获取nav列表
 function navList(preState=initNavList,action){
+    
     const {type,data} = action
        switch(type){
            case GET_NAVLIST:
@@ -63,11 +64,42 @@ function newList(preState=initNewList,action){
     return preState
 }
 
+// 获取详情页数据
+function detailData(preState={},action){
+    
+    const {type,data} = action
+
+    switch (type) {
+        case GET_DETAIL:   
+           return data
+        default:
+           return preState;
+    }
+    
+}
+
+// 获取评论列表的数据
+function commentData(preState=[],action){
+    
+    const {type,data} = action
+    switch (type) {
+        case GET_COMMENTS:
+            return data
+        case ADD_COMMENT:
+            console.log("添加数据",preState);
+            return [...preState,data]
+        default:
+            return preState
+    }
+}
+
 export default combineReducers({
     language,
     navList,
     sideBarList,
     companys,
     hotList,
-    newList
+    newList,
+    detailData,
+    commentData
 })

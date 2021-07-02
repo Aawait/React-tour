@@ -12,7 +12,7 @@ export default class App extends Component {
                 <div id="App" style={{display:'flex',flexDirection:'column'}}>
                     <Switch>
                         <Route exact path="/" component= { TourContent } />
-                        <Route path="/detail/:goodsid" component= { Detail } />
+                        <Route path="/detail" component= { Detail } />
                         <Route path="/login" component ={ Login } />
                         <Route component={NotFound}/>
                     </Switch>

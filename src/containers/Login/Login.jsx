@@ -7,7 +7,7 @@ import {
     Button,
     Divider,
     Typography,
-    Avatar
+    Avatar,
 } from 'antd'
 import './Login.css'
 
@@ -49,7 +49,7 @@ class Login extends Component {
                              <Title children="密码登录" level= {4} className="title-h4" onClick={ this.handleClick(1) }/>
                              <Title children="免费注册" level= {4} className="title-h4" onClick={ this.handleClick(2) }/>
                          </div>
-                         <p className="title-active" style={type === 1 ? {left:'109px'} : {right:'109px'} } />
+                         <p className="title-active" style={type === 1 ? {left:'101px'} : {right:'101px'} } />
                          <Divider />
                          <div className="loginInfo">
                              {

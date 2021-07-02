@@ -1,0 +1,61 @@
+#detail .content {
+  padding: 30px 6%;
+}
+#detail .content .detail-title {
+  color: #333;
+  font-weight: 500;
+  font-size: 20px;
+}
+#detail .content .description {
+  font-weight: 400;
+  margin: 10px 0;
+}
+#detail .content .oldPrice {
+  margin: 0;
+  text-decoration: line-through;
+  color: #666666;
+}
+#detail .content .nowPrice {
+  margin: 10px 0 20px 0;
+}
+#detail .content .nowPrice .nowPrice-text {
+  color: #f00;
+  margin-right: 50px;
+}
+#detail .content .nowPrice .rate-txt {
+  font-weight: 400;
+  font-size: 18px;
+}
+#detail .content .nowPrice .rateinfo {
+  margin: 0;
+}
+#detail .content .nowPrice .rateinfo .ant-rate-star {
+  margin: 0 2px;
+}
+#detail .content .Links {
+  margin: 20px 0;
+}
+#detail .content .ant-menu-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+#detail .content .ant-menu-title-content {
+  display: block;
+  margin-left: 0;
+}
+#detail .content .ant-anchor-link {
+  padding-left: 8px;
+}
+#detail .content #features {
+  margin-bottom: 20px;
+}
+#detail .content #features .bigImg {
+  text-align: center;
+}
+#detail .content #fees {
+  margin-bottom: 20px;
+}
+#detail .content #notes {
+  margin-bottom: 20px;
+}

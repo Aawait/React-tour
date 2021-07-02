@@ -11,9 +11,9 @@ import {
 import './GoodsList.css'
 class GoodsList extends Component {
 
-    handleClick(id){
+    handleClick(item){
        const {history} = this.props
-       history.push(`/detail/${id}`)
+       history.push('/detail',{detailInfo:item})
     }
 
     render() {
@@ -33,7 +33,7 @@ class GoodsList extends Component {
                         <Col span={20}>
                             <div className="ad-grid">
                                 {/* 大图 */}
-                                <div className="grid-item big-item" onClick={ this.handleClick.bind(this,firstItem.id) }>
+                                <div className="grid-item big-item" onClick={ this.handleClick.bind(this,firstItem) }>
                                     <div className="imgBox">
                                         <Image src={firstItem.photos[0].url} width="100%" height="100%" />
                                     </div>
@@ -43,7 +43,7 @@ class GoodsList extends Component {
                                 {/* 剩余小图 */}
                                 {
                                     newList.map(item => (
-                                    <div className="grid-item" key={ nanoid()} onClick={ this.handleClick.bind(this,item.id) }>
+                                    <div className="grid-item" key={ nanoid()} onClick={ this.handleClick.bind(this,item) }>
                                         <div className="imgBox">
                                             <Image src={item.photos[0].url} width="100%" height="100%" />
                                         </div>
